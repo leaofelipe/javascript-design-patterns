@@ -1,0 +1,22 @@
+{
+  "name": "javascript-design-patterns",
+  "version": "0.1.0",
+  "private": true,
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leaofelipe/javascript-design-patterns.git"
+  },
+  "author": "Felipe Leão <felipe@felipeleao.com> (http://felipeleao.com/)",
+  "scripts": {
+    "test": "mocha test/**/*.js"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
