@@ -12,12 +12,20 @@
     "test": "mocha test/**/*.js"
   },
   "standard": {
-    "env": ["mocha"],
-    "globals": ["chai", "should"]
+    "env": [
+      "mocha"
+    ],
+    "globals": [
+      "chai",
+      "should"
+    ]
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "standard": "^9.0.0"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
   }
 }
