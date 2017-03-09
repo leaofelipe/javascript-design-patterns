@@ -1,5 +1,7 @@
 'use strict'
 
+let Repo = require('./module')
+
 /**
 * Using prototype, the class method will not
 * create a new function for every instance.
@@ -7,8 +9,8 @@
 * to the linked prototype function. This is much more efficient.
 */
 
-let Task = function (name) {
-  this.name = name
+let Task = function (data) {
+  this.name = data.name
   this.completed = false
 }
 
@@ -18,7 +20,8 @@ Task.prototype.complete = function () {
 }
 
 Task.prototype.save = function () {
-  return true
+  let result = Repo.save(this)
+  return result
 }
 
 module.exports = Task

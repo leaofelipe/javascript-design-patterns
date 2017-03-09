@@ -3,12 +3,12 @@
 'use strict'
 
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
-let Task = require('../creational/constructor')
+let Task = require('../creational/prototype')
 
 describe('Creational Pattern - Prototype', () => {
   let task1
   before(() => {
-    task1 = new Task('Do something...')
+    task1 = new Task({name: 'Task #1'})
   })
 
   it('should create a new task', () => {
@@ -16,7 +16,7 @@ describe('Creational Pattern - Prototype', () => {
   })
 
   it('name should be equal', () => {
-    task1.name.should.be.equal('Do something...')
+    task1.name.should.be.equal('Task #1')
   })
 
   it('completed should be false', () => {
@@ -28,6 +28,10 @@ describe('Creational Pattern - Prototype', () => {
   })
 
   it('save should be true', () => {
-    task1.save().should.be.true
+    task1.save().should.be.eql({
+      name: 'Task #1',
+      status: 'OK',
+      database: 'DB_1'
+    })
   })
 })
