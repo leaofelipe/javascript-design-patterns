@@ -4,6 +4,7 @@
 ##### Base knowledge
 - [Object properties](./concepts/defineproperty.js)
 - [Class](./concepts/class.js)
+
 ##### Creational Patterns
 - [Constructor](./creational/constructor.js)
 - [Prototype](./creational/prototype.js)
