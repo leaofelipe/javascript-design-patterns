@@ -2,10 +2,10 @@
 
 // Compare between: using_factory.js
 // >>>> NOT USING FACTORY <<<<<<
-let Task = require('./../prototype')
-let taskRepo = require('./taskRepo')
-let userRepo = require('./userRepo')
-let projectRepo = require('./projectRepo')
+let Task = require('../prototype')
+let taskRepo = require('./fixtures/taskRepo')
+let userRepo = require('./fixtures/userRepo')
+let projectRepo = require('./fixtures/projectRepo')
 
 let task = new Task(taskRepo.get(1))
 let user = userRepo.get(1)
