@@ -9,6 +9,8 @@
 - [Constructor](./creational/constructor.js)
 - [Prototype](./creational/prototype.js)
 - [Module](./creational/module.js)  
+- [Factory](./creational/factory/)  
+- [Singleton](./creational/singleton/)  
 
 ##### License
 [![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-2.png)](http://www.wtfpl.net)
