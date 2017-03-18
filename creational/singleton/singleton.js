@@ -9,15 +9,5 @@
 */
 
 let taskHandler = require('./taskHandler')
-let repo = require('./Repo')
-let myrepo = repo()
-
-myrepo.save('Hi')
-myrepo.save('Hi')
-myrepo.save('Hi')
-console.log(taskHandler.save())
-taskHandler.save()
-taskHandler.save()
-console.log(taskHandler.save())
 
 module.exports = myrepo

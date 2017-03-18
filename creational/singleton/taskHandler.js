@@ -6,7 +6,7 @@ let myrepo = repo()
 let taskHandler = () => {
   return {
     save: () => {
-      myrepo.save('me')
+      return myrepo.save('me')
     }
   }
 }
