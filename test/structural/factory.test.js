@@ -3,9 +3,9 @@
 'use strict'
 
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
-let Task = require('../creational/prototype')
-let task1 = require('../creational/factory/no_factory')
-let task2 = require('../creational/factory/factory')
+let Task = require('../../creational/prototype')
+let task1 = require('../../creational/factory/no_factory')
+let task2 = require('../../creational/factory/factory')
 
 describe('Creational - Factory', () => {
   describe('not using factory', () => {

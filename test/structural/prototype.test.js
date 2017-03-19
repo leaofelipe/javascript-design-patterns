@@ -3,7 +3,7 @@
 'use strict'
 
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
-let Task = require('../creational/prototype')
+let Task = require('../../creational/prototype')
 
 describe('Creational Pattern - Prototype', () => {
   let task1

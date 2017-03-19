@@ -3,11 +3,10 @@
 'use strict'
 
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
-let Task = require('../concepts/class')
+let Task = require('../../creational/constructor')
 
-describe('Concepts - Class', () => {
+describe('Creational Pattern - Constructor', () => {
   let task1
-
   before(() => {
     task1 = new Task('Do something...')
   })

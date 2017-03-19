@@ -1,6 +1,6 @@
 'use strict'
 
-const mod = require('../concepts/defineproperty')
+const mod = require('../../concepts/defineproperty')
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
 const _ = require('underscore')
 const user = mod.user

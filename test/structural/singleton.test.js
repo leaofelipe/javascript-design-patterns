@@ -3,7 +3,7 @@
 'use strict'
 
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
-let taskHandler = require('../creational/singleton/taskHandler')
+let taskHandler = require('../../creational/singleton/taskHandler')
 
 describe('Creational - Singleton', () => {
   let response

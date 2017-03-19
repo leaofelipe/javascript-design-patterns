@@ -3,8 +3,8 @@
 'use strict'
 
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
-let Repo = require('../creational/module')
-let Task = require('../creational/prototype')
+let Repo = require('../../creational/module')
+let Task = require('../../creational/prototype')
 
 describe('Creational - Module', () => {
   it('should get a task by ID', () => {
