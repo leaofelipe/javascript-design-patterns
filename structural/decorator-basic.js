@@ -1,5 +1,13 @@
 'use strict'
 
+/**
+* Structural Decorator
+* - Add functionality on existing object
+* - More complete inheritance
+* - Wrap an Object
+* - Protect existing object
+*/
+
 let Task = require('../creational/prototype')
 
 let urgentTask = new Task({name: 'Task!'})

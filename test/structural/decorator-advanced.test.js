@@ -3,9 +3,9 @@
 'use strict'
 
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
-let task = require('../../structural/decorator-basic')
+let task = require('../../structural/decorator-advanced')
 
-describe('Structural - Decorator', () => {
+describe('Structural - Decorator Advanced', () => {
   describe('Task', () => {
     it('should have priority property', () => {
       task.should.have.property('priority')
