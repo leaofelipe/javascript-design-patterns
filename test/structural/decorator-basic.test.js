@@ -3,7 +3,7 @@
 'use strict'
 
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
-let task = require('../../structural/decorator-basic')
+let task = require('../../structural/decorator/decorator-basic')
 
 describe('Structural - Decorator', () => {
   describe('Task', () => {

@@ -6,7 +6,7 @@
 * new Urgent Task!
 */
 
-let Task = require('../creational/prototype')
+let Task = require('../../creational/prototype')
 
 /* let UrgentTask = Object.create(Task.prototype) */
 function UrgentTask (data) {

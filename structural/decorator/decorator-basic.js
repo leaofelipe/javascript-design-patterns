@@ -8,7 +8,7 @@
 * - Protect existing object
 */
 
-let Task = require('../creational/prototype')
+let Task = require('../../creational/prototype')
 
 let urgentTask = new Task({name: 'Task!'})
 urgentTask.priority = 2
