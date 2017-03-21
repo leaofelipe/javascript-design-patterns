@@ -8,7 +8,12 @@
 * - ONLY USEFUL WHEN WE HAVE LARGE NUMBER OF OBJECTS
 */
 
-let Task = function (data) {
+let projects = ['none', 'p1', 'p2', 'p3']
+let priorities = [1, 2, 3, 4, 5]
+let users = ['Felipe', 'James', 'Kate', 'Nathan']
+let completed = [true, false]
+
+let Task1 = function (data) {
   this.name = data.name
   this.priority = data.priority
   this.project = data.project
@@ -16,12 +21,41 @@ let Task = function (data) {
   this.completed = data.completed
 }
 
-function TaskCollection () {
+let Task2 = function (data) {
+  this.name = data.name // The only unique!!!
+  this.flyweight = FlyweightFactory.get(data.project, data.priority, data.user, data.completed)
+}
+
+// FLYWEIGHT
+function Flyweight (project, priority, user, completed) {
+  this.priority = priority
+  this.project = project
+  this.user = user
+  this.completed = completed
+}
+
+let FlyweightFactory = (function () {
+  let flyweights = {}
+
+  // If key not exists, we create a new one
+  let get = function (project, priority, user, completed) {
+    if (!flyweights[project + priority + user + completed]) {
+      flyweights[project + priority + user + completed] = new Flyweight(project, priority, user, completed)
+    }
+    return flyweights[project + priority + user + completed]
+  }
+
+  return {
+    get: get
+  }
+}())
+
+function TaskCollection (T) {
   let tasks = {}
   let count = 0
 
   let add = function (data) {
-    tasks[data.name] = new Task(data)
+    tasks[data.name] = new T(data)
     count++
   }
 
@@ -40,18 +74,14 @@ function TaskCollection () {
   }
 }
 
-let tasks = new TaskCollection()
+let tasks1 = new TaskCollection(Task1)
+let tasks2 = new TaskCollection(Task2)
 
-let projects = ['none', 'p1', 'p2', 'p3']
-let priorities = [1, 2, 3, 4, 5]
-let users = ['Felipe', 'James', 'Kate', 'Nathan']
-let completed = [true, false]
-
-function testCreation (t) {
+function testCreation (col) {
   let initialMemory = process.memoryUsage().heapUsed
 
-  for (let i = 0; i < 100000; i++) {
-    t.add({
+  for (let i = 0; i < 1000000; i++) {
+    col.add({
       name: `task${i}`,
       priority: priorities[Math.floor((Math.random() * 5))],
       project: projects[Math.floor((Math.random() * 4))],
@@ -65,8 +95,12 @@ function testCreation (t) {
 
   return {
     memUsage: memUsage,
-    taskCount: tasks.getCount()
+    taskCount: col.getCount()
   }
 }
 
-console.log(testCreation(tasks))
+module.exports = {
+  tasks1: tasks1,
+  tasks2: tasks2,
+  testCreation: testCreation
+}
