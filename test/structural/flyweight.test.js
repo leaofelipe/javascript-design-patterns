@@ -5,7 +5,7 @@
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
 let flyweight = require('../../structural/flyweight')
 
-describe.skip('Structural - Flyweight', () => {
+describe('Structural - Flyweight', () => {
   let r1
   let r2
   before(function () {
