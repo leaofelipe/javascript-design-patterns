@@ -9,7 +9,7 @@
   },
   "author": "Felipe Leão <felipe@felipeleao.com> (http://felipeleao.com/)",
   "scripts": {
-    "test": "mocha test/**/*.js"
+    "test": "mocha test/**/**/*.js"
   },
   "standard": {
     "env": [
