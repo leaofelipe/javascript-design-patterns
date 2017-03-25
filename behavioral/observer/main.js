@@ -1,63 +1,9 @@
 'use strict'
 
 let Task = require('./Task')
+let ObserverList = require('./ObserverList')
 
-/* let NotificationService = function () { */
-/*   let message = 'Notifying' */
-/*   this.update = function (task) { */
-/*     return message */
-/*   } */
-/* } */
-
-/* let LoggingService = function () { */
-/*   let message = 'Logging' */
-/*   this.update = function (task) { */
-/*     return message */
-/*   } */
-/* } */
-
-let AuditingService = function () {
-  let message = 'Auditing'
-  this.update = function (task) {
-    return message + ' task ' + task.name
-  }
-}
-
-function ObserverList () {
-  this.observerList = []
-}
-
-ObserverList.prototype.add = function (obj) {
-  this.observerList.push(obj)
-}
-
-ObserverList.prototype.get = function (index) {
-  if (index > -1 && index < this.observerList.length) {
-    return this.observerList[index]
-  }
-}
-
-ObserverList.prototype.count = function () {
-  return this.observerList.length
-}
-
-ObserverList.prototype.removeAt = function (index) {
-  this.observerList.splice(index, 1)
-}
-
-ObserverList.prototype.indexOf = function (obj, startIndex) {
-  let i
-
-  while (i < this.observerList.length) {
-    if (this.observerList[i] === obj) {
-      return i
-    }
-    i++
-  }
-
-  return -1
-}
-
+// Observable task Inherit Task for observers include
 let ObservableTask = function (data) {
   Task.call(this, data)
   this.observers = new ObserverList()
@@ -83,17 +29,4 @@ ObservableTask.prototype.save = function () {
   this.notify(this)
 }
 
-/* let task1 = new ObservableTask({name: 'Task #1', user: 'Felipe'}) */
-
-/* let nots = new NotificationService() */
-/* let logs = new LoggingService() */
-/* let audits = new AuditingService() */
-
-/* task1.addObserver(nots.update) */
-/* task1.addObserver(logs.update) */
-/* task1.addObserver(audits.update) */
-
-module.exports = {
-  ObservableTask: ObservableTask,
-  AuditingService: AuditingService
-}
+module.exports = ObservableTask

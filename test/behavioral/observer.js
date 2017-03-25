@@ -4,9 +4,8 @@
 
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
 const sinon = require('sinon')  // eslint-disable-line no-unused-vars
-let observer = require('../../behavioral/observer/main')
-let ObservableTask = observer.ObservableTask
-let AuditingService = observer.AuditingService
+let ObservableTask = require('../../behavioral/observer/main')
+let AuditingService = require('../../behavioral/observer/AuditingService')
 
 describe('Behavioral - Observer', () => {
   let task
@@ -27,7 +26,6 @@ describe('Behavioral - Observer', () => {
       task.addObserver(audits.update)
       task.save(spyUpdate)
       spyUpdate.calledOnce.should.be.true
-      /* spy.returnValues[0].should.be.eql('Auditing task T') */
     })
 
     it('should return Auditing task T', () => {
