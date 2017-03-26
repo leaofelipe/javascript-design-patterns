@@ -5,7 +5,7 @@
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
 const sinon = require('sinon')  // eslint-disable-line no-unused-vars
 let ObservableTask = require('../../behavioral/observer/main')
-let AuditingService = require('../../behavioral/observer/AuditingService')
+let AuditingService = require('../../behavioral/fixtures/AuditingService')
 
 describe('Behavioral - Observer', () => {
   let task

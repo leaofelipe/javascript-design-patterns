@@ -5,7 +5,7 @@ let Task = function (data) {
   this.priority = data.priority
   this.project = data.project
   this.user = data.user
-  this.completed = data.completed
+  this.completed = data.completed || false
 }
 
 Task.prototype.complete = function () {

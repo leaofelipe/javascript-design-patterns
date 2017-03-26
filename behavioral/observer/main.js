@@ -1,6 +1,6 @@
 'use strict'
 
-let Task = require('./Task')
+let Task = require('../fixtures/Task')
 let ObserverList = require('./ObserverList')
 
 // Observable task Inherit Task for observers include
