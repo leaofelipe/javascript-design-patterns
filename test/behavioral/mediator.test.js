@@ -8,7 +8,7 @@ let Task = require('../../behavioral/fixtures/Task')
 let AuditingService = require('../../behavioral/fixtures/AuditingService')
 let mediator = require('../../behavioral/mediator.js')
 
-describe.only('Behavioral - Mediator', () => {
+describe('Behavioral - Mediator', () => {
   let task
   let audit
 
