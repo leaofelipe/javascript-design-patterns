@@ -3,7 +3,7 @@
 let repo = require('./Repo')
 let myrepo = repo()
 
-let taskHandler = () => {
+let taskHandler = function () {
   return {
     save: () => {
       return myrepo.save('me')

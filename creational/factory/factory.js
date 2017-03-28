@@ -6,8 +6,6 @@
 * Create object for us
 * Creating objects based on NEED
 * - used by gulp-load-plugins
-*
-* Best version of: no_factory.js
 */
 let Task = require('../prototype')
 let repoFactory = require('./repoFactory')

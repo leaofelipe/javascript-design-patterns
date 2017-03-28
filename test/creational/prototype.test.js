@@ -5,7 +5,7 @@
 const should = require('chai').should()  // eslint-disable-line no-unused-vars
 let Task = require('../../creational/prototype')
 
-describe('Creational Pattern - Prototype', () => {
+describe('Creational - Prototype', () => {
   let task1
   before(() => {
     task1 = new Task({name: 'Task #1'})
